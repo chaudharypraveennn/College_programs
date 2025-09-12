@@ -4,11 +4,11 @@
 int main()
 {
     void create();
-    void insert();
+    // void insert();
     void traverse();
     create();
     traverse();
-    insert();
+    // insert();
     traverse();
     return 0;
 }
@@ -16,7 +16,8 @@ int main()
 struct node
 {
     int info;
-    struct node *link;
+    struct node *prev;
+    struct node *next;
 };
 struct node *first;
 
@@ -30,44 +31,34 @@ void create()
     printf("Enter info of ptr: ");
     scanf("%d", &ptr->info);
 
+    ptr->prev = NULL;
     first = ptr;
 
     do
     {
         cpt = (struct node *)malloc(sizeof(struct node));
 
-        printf("enter info of cpt: ");
+        printf("Enter info of cpt: ");
         scanf("%d", &cpt->info);
 
-        ptr->link = cpt;
+        ptr->next = cpt;
+        cpt->prev = ptr;
         ptr = cpt;
 
         printf("Do you want more node press '0/1': ");
         scanf("%d", &num);
     } while (num == 1);
-    ptr->link = NULL;
+    ptr->next = NULL;
 }
 
-void traverse()
-{
-    struct node *z;
-    z = first;
+// void traverse()
+// {
+//     struct node *z;
+//     z = first;
 
-    while (z != NULL)
-    {
-        printf("%d\t%d\n", z->info, z->link);
-        z = z->link;
-    }
-}
-
-void insert()
-{
-    struct node *node;
-
-    node = (struct node *)malloc(sizeof(struct node));
-    printf("\nEnter value to insert: ");
-    scanf("%d", &node->info);
-    // node->link = NULL;
-    node->link = first;
-    first = node;
-}
+//     while (z != NULL)
+//     {
+//         printf("%d\t%d\n", z->info, z->link);
+//         z = z->link;
+//     }
+// }

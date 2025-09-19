@@ -7,12 +7,12 @@
 int main()
 {
     void create();
-    // void insert();
+    void insert();
     void traverse();
     create();
     traverse();
-    // insert();
-    // traverse();
+    insert();
+    traverse();
     return 0;
 }
 
@@ -72,4 +72,24 @@ void traverse()
         printf("%d\t%d\t%d\n",t->prev, t->info, t->next);
         t = t->next;
     }
+}
+
+void insert()
+{
+    struct node *node, *t;
+
+    node = (struct node *)malloc(sizeof(struct node));
+    printf("\nEnter value to insert: ");
+    scanf("%d", &node->info);
+    t = first;
+    while(t->next != first)
+    {
+        t = t->next;
+    }
+    node->next = first;
+    node->prev = t;
+    // t->next = node;
+    first->prev = node;
+    first = node;
+    t->next = first;
 }

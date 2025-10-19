@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Cart - GL Bajaj</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+	<div class="logo">
+		<img src="new-logo-glbajaj.webp" alt="College Logo">
+	</div>
+	<nav>
+		<ul>
+			<li><a href="home.html">Home</a></li>
+			<li><a href="catalogue.html">Catalogue</a></li>
+			<li><a href="cart.html" class="active">Cart</a></li>
+			<li><a href="registration.html">Registration</a></li>
+			<li><a href="login.html">Login</a></li>
+		</ul>
+	</nav>
+</header>
+
+<main>
+	<h1>Your Cart</h1>
+	<section class="cart-section">
+		<table id="cart-table">
+			<thead>
+			<tr>
+				<th>Serial No.</th>
+				<th>Book Name</th>
+				<th>Price</th>
+				<th>Action</th>
+			</tr>
+			</thead>
+			<tbody id="cart-body">
+			<!-- JS will populate cart items here -->
+			</tbody>
+		</table>
+		<h3>Total: <span id="total-price">₹0</span></h3>
+		<a href="catalogue.html" class="btn">Go to Catalogue</a>
+	</section>
+</main>
+
+<footer>
+	<p>&copy; 2025 GL Bajaj | All rights reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

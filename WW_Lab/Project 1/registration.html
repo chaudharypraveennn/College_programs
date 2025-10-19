@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Registration - GL Bajaj</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+	<div class="logo">
+		<img src="new-logo-glbajaj.webp" alt="College Logo">
+	</div>
+	<nav>
+		<ul>
+			<li><a href="home.html">Home</a></li>
+			<li><a href="catalogue.html">Catalogue</a></li>
+			<li><a href="cart.html">Cart</a></li>
+			<li><a href="registration.html" class="active">Registration</a></li>
+			<li><a href="login.html">Login</a></li>
+		</ul>
+	</nav>
+</header>
+
+<main>
+	<section class="registration-section">
+		<div class="registration-card">
+			<h1>Register for GL Bajaj</h1>
+			<form action="submit_registration.php" method="POST">
+				<div class="form-group">
+					<label for="first-name">First Name</label>
+					<input type="text" id="first-name" name="first-name" placeholder="Enter first name" required>
+				</div>
+				
+				<div class="form-group">
+					<label for="last-name">Last Name</label>
+					<input type="text" id="last-name" name="last-name" placeholder="Enter last name" required>
+				</div>
+				
+				<div class="form-group">
+					<label for="email">Email</label>
+					<input type="email" id="email" name="email" placeholder="Enter your email" required>
+				</div>
+				
+				<div class="form-group">
+					<label for="phone">Phone Number</label>
+					<input type="tel" id="phone" name="phone" placeholder="Enter phone number" required>
+				</div>
+				
+				<div class="form-group">
+					<label for="course">Select Course</label>
+					<select id="course" name="course" required>
+						<option value="">Choose your course</option>
+						<option value="computer-science">Computer Science</option>
+						<option value="mechanical-engineering">Mechanical Engineering</option>
+						<option value="electrical-engineering">Electrical Engineering</option>
+						<option value="civil-engineering">Civil Engineering</option>
+						<option value="business">Business Administration</option>
+					</select>
+				</div>
+				
+				<button type="submit" class="btn">Register</button>
+			</form>
+		</div>
+	</section>
+</main>
+
+<footer>
+	<p>&copy; 2025 GL Bajaj | All rights reserved.</p>
+</footer>
+</body>
+</html>

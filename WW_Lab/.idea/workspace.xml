@@ -7,14 +7,14 @@
     <list default="true" id="8cb36144-d61d-4bc8-a46f-454a5920df9e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/../Data_Structures/circular_doubly_linkedlist.c" beforeDir="false" afterPath="$PROJECT_DIR$/../Data_Structures/circular_doubly_linkedlist.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Data_Structures/circular_doubly_linkedlist.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../Data_Structures/circular_doubly_linkedlist.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GLBajaj_logo.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cart_section.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/catalogue_page.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/login_page.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project1.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project1.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/register_page.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project 1/cart.html" beforeDir="false" afterPath="$PROJECT_DIR$/Project 1/cart.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project 1/catalogue.html" beforeDir="false" afterPath="$PROJECT_DIR$/Project 1/catalogue.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project 1/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/Project 1/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project 1/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/Project 1/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project 1/new-logo-glbajaj.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project 1/registration.html" beforeDir="false" afterPath="$PROJECT_DIR$/Project 1/registration.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project 1/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/Project 1/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,6 +45,7 @@
   &quot;keyToString&quot;: {
     &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
@@ -73,7 +74,8 @@
       <workItem from="1760151947771" duration="120000" />
       <workItem from="1760772607701" duration="487000" />
       <workItem from="1760803460292" duration="2738000" />
-      <workItem from="1760846980304" duration="3737000" />
+      <workItem from="1760846980304" duration="3937000" />
+      <workItem from="1760858284896" duration="2727000" />
     </task>
     <servers />
   </component>

@@ -13,6 +13,8 @@ int main()
     traverse();
     insert();
     traverse();
+    void delete();
+    delete();
     return 0;
 }
 
@@ -92,4 +94,28 @@ void insert()
     first->prev = node;
     first = node;
     t->next = first;
+}
+
+void delete()
+{
+    struct node *del;
+    // struct node *x, *y, *z;
+    // x  = first;
+    // y = x->prev;
+    // z = y->prev;
+    // x->prev = z;
+    // z->prev = x;
+    // free(y);
+
+    x = first;
+    printf("Enter data whose node you want to delete: ");
+    int t;
+    scanf("%d", &t);
+    while (x->info != t)
+    {
+        x = x->next;
+    }
+    t = x->prev;
+    
+
 }

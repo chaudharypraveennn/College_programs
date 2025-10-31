@@ -49,8 +49,8 @@ void display() {
         temp = temp->link;
     }
 
-    printf("\nf=%d", f->data);
-    printf("\nr=%d", r->data);
+    printf("\nf = %d", f->data);
+    printf("\nr = %d", r->data);
     printf("\n");
 }
 

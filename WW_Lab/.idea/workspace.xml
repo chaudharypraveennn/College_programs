@@ -5,11 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8cb36144-d61d-4bc8-a46f-454a5920df9e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../Data_Structures/circular_doubly_linkedlist.c" beforeDir="false" afterPath="$PROJECT_DIR$/../Data_Structures/circular_doubly_linkedlist.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Data_Structures/circular_doubly_linkedlist.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../Data_Structures/circular_doubly_linkedlist.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java/Technical_Training.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java/src/questions1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Python/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Python/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project 1/cart.html" beforeDir="false" afterPath="$PROJECT_DIR$/Project 1/cart.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project 1/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/Project 1/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project 1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Project 1/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,6 +48,7 @@
     &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/College_programs/WW_Lab&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -75,7 +81,19 @@
       <workItem from="1761109125780" duration="133000" />
       <workItem from="1761537824004" duration="341000" />
       <workItem from="1761557724732" duration="1473000" />
-      <workItem from="1761639440359" duration="304000" />
+      <workItem from="1761639440359" duration="564000" />
+      <workItem from="1761640142596" duration="8000" />
+      <workItem from="1762058902634" duration="643000" />
+      <workItem from="1762092691382" duration="68000" />
+      <workItem from="1762157206570" duration="534000" />
+      <workItem from="1762614576336" duration="1024000" />
+      <workItem from="1762684184918" duration="146000" />
+      <workItem from="1762769835743" duration="2330000" />
+      <workItem from="1763373555244" duration="1635000" />
+      <workItem from="1763880767796" duration="694000" />
+      <workItem from="1763883095932" duration="23000" />
+      <workItem from="1763890318855" duration="14000" />
+      <workItem from="1763890381411" duration="1000" />
     </task>
     <servers />
   </component>

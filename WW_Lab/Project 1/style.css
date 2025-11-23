@@ -1,29 +1,125 @@
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+/* =========================
+   COLOR PRESETS (LIGHT)
+========================= */
+:root {
+    --color-bg-header: #333;          /* DO NOT CHANGE NAVBAR */
+    --color-bg-footer: #333;
+
+    --color-text-main: #0b0f0d;
+
+    --color-card-bg: #ffffff;
+    --color-card-shadow: rgba(0, 0, 0, 0.14);
+
+    --color-btn: #4caf50;           
+    --color-btn-hover: #43a047;
+
+    --color-accent: #4caf50;
+
+    --color-table-header: #4caf50;
+    --color-table-row-alt: #f1f8e9;
+    --color-table-row-hover: #e8f5e9;
+
+    --color-link: #4caf50;
+
+    --color-logout: #e53935;
+    --color-logout-hover: #c62828;
+}
+
+/* =========================
+   COLOR PRESETS (DARK)
+========================= */
+[data-theme="dark"] {
+    --color-bg-header: #020617;      /* near-black navy */
+    --color-bg-footer: #000000;
+    --color-text-main: #e5e7eb;
+    --color-card-bg: #020617;        /* deep slate */
+    --color-card-shadow: rgba(15, 23, 42, 0.8);
+    --color-btn: #22c55e;            /* bright green */
+    --color-btn-hover: #16a34a;
+    --color-accent: #22c55e;
+    --color-table-header: #16a34a;
+    --color-table-row-alt: #0b1220;
+    --color-table-row-hover: #020617;
+    --color-link: #38bdf8;           /* sky blue links for dark */
+    --color-logout: #f97373;
+    --color-logout-hover: #fb3f3f;
+}
+
+/* =========================
+   BASE
+========================= */
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background-color: #f4f4f4;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    color: var(--color-text-main);
 }
 
-/* =========================================================
+/* Per-page gradient backgrounds (LIGHT) */
+.page-home {
+    background: linear-gradient(135deg, #fdfbff 0%, #e3f2ff 40%, #f3fff5 100%);
+}
+
+.page-catalogue {
+    background: linear-gradient(135deg, #f0fdf4 0%, #e8fbee 40%, #f0fdf4 100%);
+}
+
+.page-login {
+    background: linear-gradient(135deg, #f5f7ff 0%, #e0e7ff 40%, #f5f3ff 100%);
+}
+
+.page-registration {
+    background: linear-gradient(135deg, #f5fff9 0%, #dcfce7 35%, #eff6ff 100%);
+}
+
+.page-cart {
+    background: linear-gradient(135deg, #fdf2ff 0%, #fae8ff 35%, #eef2ff 100%);
+}
+
+/* Per-page gradient backgrounds (DARK) */
+[data-theme="dark"] .page-home {
+    background: linear-gradient(135deg, #020617 0%, #0b1120 40%, #111827 100%);
+}
+
+[data-theme="dark"] .page-catalogue {
+    background: linear-gradient(135deg, #020617 0%, #111827 40%, #312e81 100%);
+}
+
+[data-theme="dark"] .page-login {
+    background: linear-gradient(135deg, #020617 0%, #0f172a 40%, #1d3557 100%);
+}
+
+[data-theme="dark"] .page-registration {
+    background: linear-gradient(135deg, #020617 0%, #022c22 40%, #064e3b 100%);
+}
+
+[data-theme="dark"] .page-cart {
+    background: linear-gradient(135deg, #020617 0%, #1f2937 40%, #4b1d3f 100%);
+}
+
+/* =========================
    HEADER / NAVBAR
-========================================================= */
+========================= */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #333;
+    background-color: var(--color-bg-header);
     color: #fff;
     padding: 10px 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.35);
 }
 
 .logo img {
@@ -34,6 +130,7 @@ header {
 nav ul {
     display: flex;
     list-style: none;
+    align-items: center;
 }
 
 nav ul li {
@@ -46,17 +143,58 @@ nav ul li a {
     font-weight: bold;
     padding: 5px 10px;
     transition: background 0.3s, color 0.3s;
+    border-radius: 999px;
 }
 
 nav ul li a:hover,
 nav ul li a.active {
-    background-color: #4CAF50;
-    border-radius: 5px;
+    background-color: var(--color-accent);
+    color: #f9fafb;
 }
 
-/* =========================================================
+/* Theme toggle button in navbar */
+.theme-toggle-btn {
+    background: none;
+    border: 1px solid #e5e7eb;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 0;
+    color: #f9fafb;
+}
+
+.theme-toggle-btn:hover {
+    background-color: rgba(249, 250, 251, 0.12);
+}
+
+/* Logout button (only one in navbar) */
+.nav-logout {
+    margin-right: 0;
+}
+
+.logout-btn {
+    background-color: var(--color-logout);
+    color: #fff;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 999px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.logout-btn:hover {
+    background-color: var(--color-logout-hover);
+}
+
+/* =========================
    MAIN CONTENT
-========================================================= */
+========================= */
 main {
     flex: 1;
     padding: 20px;
@@ -64,38 +202,47 @@ main {
 }
 
 h1, h2 {
-    color: #333;
+    color: var(--color-text-main);
 }
 
 section {
     margin: 20px 0;
 }
 
-/* =========================================================
+/* Highlighted user name */
+.highlight-name {
+    color: #f97316;
+    font-weight: 700;
+}
+
+/* =========================
    BUTTONS
-========================================================= */
+========================= */
 .btn {
     display: inline-block;
     width: auto;
     padding: 10px 20px;
-    background-color: #4CAF50;
+    background-color: var(--color-btn);
     color: #fff;
     text-decoration: none;
     border: none;
-    border-radius: 5px;
+    border-radius: 999px;
     cursor: pointer;
     font-size: 16px;
     margin-top: 10px;
-    transition: background 0.3s;
+    transition: background 0.25s, transform 0.15s, box-shadow 0.15s;
+    box-shadow: 0 4px 10px rgba(16, 185, 129, 0.3);
 }
 
 .btn:hover {
-    background-color: #45a049;
+    background-color: var(--color-btn-hover);
+    transform: translateY(-1px);
+    box-shadow: 0 8px 18px rgba(16, 185, 129, 0.35);
 }
 
-/* =========================================================
+/* =========================
    HOME PAGE STYLES
-========================================================= */
+========================= */
 .home-welcome {
     display: flex;
     justify-content: center;
@@ -104,17 +251,18 @@ section {
 }
 
 .welcome-card {
-    background-color: #fff;
+    background-color: var(--color-card-bg);
     padding: 40px 30px;
-    border-radius: 12px;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    border-radius: 16px;
+    box-shadow: 0 16px 40px var(--color-card-shadow);
     max-width: 600px;
     text-align: center;
-    transition: transform 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .welcome-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-4px);
+    box-shadow: 0 24px 60px var(--color-card-shadow);
 }
 
 .home-buttons {
@@ -127,13 +275,6 @@ section {
 .home-buttons .btn {
     padding: 12px 25px;
     font-size: 16px;
-    border-radius: 8px;
-    transition: background 0.3s, transform 0.2s;
-}
-
-.home-buttons .btn:hover {
-    background-color: #45a049;
-    transform: scale(1.05);
 }
 
 /* Home Courses Section */
@@ -144,7 +285,6 @@ section {
 
 .home-courses h2 {
     margin-bottom: 25px;
-    color: #333;
 }
 
 .course-cards {
@@ -155,18 +295,21 @@ section {
 }
 
 .course-card {
-    background-color: #fff;
+    background-color: var(--color-card-bg);
     padding: 20px 25px;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    border-radius: 14px;
+    box-shadow: 0 10px 30px var(--color-card-shadow);
     min-width: 180px;
     transition: transform 0.3s, box-shadow 0.3s;
     cursor: pointer;
+    text-decoration: none;
+    color: var(--color-text-main);
+    font-weight: 600;
 }
 
 .course-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 20px 45px var(--color-card-shadow);
 }
 
 /* Responsive tweaks */
@@ -183,9 +326,9 @@ section {
     }
 }
 
-/* =========================================================
+/* =========================
    LOGIN PAGE STYLES
-========================================================= */
+========================= */
 .login-section {
     flex: 1;
     display: flex;
@@ -195,23 +338,23 @@ section {
 }
 
 .login-box {
-    background: #fff;
+    background: var(--color-card-bg);
     padding: 40px 30px;
-    border-radius: 12px;
+    border-radius: 16px;
     width: 100%;
     max-width: 400px;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
-    transition: transform 0.3s;
+    box-shadow: 0 14px 36px var(--color-card-shadow);
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .login-box:hover {
-    transform: translateY(-5px);
+    transform: translateY(-4px);
+    box-shadow: 0 20px 50px var(--color-card-shadow);
 }
 
 .login-box h2 {
     text-align: center;
     margin-bottom: 25px;
-    color: #333;
 }
 
 .login-box form .input-group {
@@ -222,39 +365,36 @@ section {
 }
 
 .login-box form .input-group label {
-    width: 30%; /* label width */
-    margin-right: 10px; /* distance from input */
+    width: 30%;
+    margin-right: 10px;
     font-weight: bold;
-    color: #555;
+    color: var(--color-text-main);
 }
 
 .login-box form .input-group input {
-    width: 68%; /* input width */
+    width: 68%;
     padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
     font-size: 14px;
     transition: all 0.3s;
+    background-color: #f9fafb;
+}
+
+[data-theme="dark"] .login-box form .input-group input {
+    background-color: #020617;
+    border-color: #374151;
+    color: var(--color-text-main);
 }
 
 .login-box form .input-group input:focus {
     outline: none;
-    border-color: #4CAF50;
-    box-shadow: 0 0 5px rgba(76, 175, 80, 0.4);
+    border-color: var(--color-accent);
+    box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.35);
 }
 
 button.btn {
     width: 100%;
-    padding: 14px;
-    font-size: 16px;
-    border-radius: 8px;
-    margin-top: 10px;
-    transition: background 0.3s, transform 0.2s;
-}
-
-button.btn:hover {
-    background-color: #45a049;
-    transform: scale(1.02);
 }
 
 /* Register link below login form */
@@ -264,7 +404,7 @@ button.btn:hover {
 }
 
 .register-link a {
-    color: #4CAF50;
+    color: var(--color-link);
     text-decoration: none;
     font-weight: bold;
 }
@@ -273,7 +413,7 @@ button.btn:hover {
     text-decoration: underline;
 }
 
-/* Responsive tweak for small screens */
+/* Responsive tweak */
 @media screen and (max-width: 600px) {
     .login-box form .input-group {
         flex-direction: column;
@@ -285,9 +425,9 @@ button.btn:hover {
     }
 }
 
-/* =========================================================
+/* =========================
    REGISTRATION PAGE STYLES
-========================================================= */
+========================= */
 .registration-section {
     display: flex;
     justify-content: center;
@@ -296,71 +436,65 @@ button.btn:hover {
 }
 
 .registration-card {
-    background-color: #fff;
+    background-color: var(--color-card-bg);
     padding: 40px 30px;
-    border-radius: 12px;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
-    max-width: 500px; /* compact card */
+    border-radius: 16px;
+    box-shadow: 0 16px 40px var(--color-card-shadow);
+    max-width: 500px;
     width: 100%;
-    transition: transform 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .registration-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-4px);
+    box-shadow: 0 24px 60px var(--color-card-shadow);
 }
 
 .registration-card h1 {
     text-align: center;
     margin-bottom: 25px;
-    color: #333;
 }
 
 .registration-card form .form-group {
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin-bottom: 15px; /* smaller gap */
+    margin-bottom: 15px;
 }
 
 .registration-card form .form-group label {
-    width: 30%; /* smaller label width */
-    margin-right: 10px; /* reduce distance */
+    width: 30%;
+    margin-right: 10px;
     font-weight: bold;
-    color: #555;
+    color: var(--color-text-main);
 }
 
 .registration-card form .form-group input,
 .registration-card form .form-group select {
-    width: 68%; /* input width reduced */
+    width: 68%;
     padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
     font-size: 14px;
     transition: all 0.3s;
+    background-color: #f9fafb;
+}
+
+[data-theme="dark"] .registration-card form .form-group input,
+[data-theme="dark"] .registration-card form .form-group select {
+    background-color: #020617;
+    border-color: #374151;
+    color: var(--color-text-main);
 }
 
 .registration-card form .form-group input:focus,
 .registration-card form .form-group select:focus {
     outline: none;
-    border-color: #4CAF50;
-    box-shadow: 0 0 5px rgba(76, 175, 80, 0.4);
+    border-color: var(--color-accent);
+    box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.35);
 }
 
-button.btn {
-    width: 100%;
-    padding: 14px;
-    font-size: 16px;
-    border-radius: 8px;
-    margin-top: 10px;
-    transition: background 0.3s, transform 0.2s;
-}
-
-button.btn:hover {
-    background-color: #45a049;
-    transform: scale(1.02);
-}
-
-/* Responsive tweak for small screens */
+/* Responsive tweak */
 @media screen and (max-width: 600px) {
     .registration-card form .form-group {
         flex-direction: column;
@@ -373,9 +507,9 @@ button.btn:hover {
     }
 }
 
-/* =========================================================
+/* =========================
    CATALOGUE PAGE STYLES
-========================================================= */
+========================= */
 .catalogue-section {
     margin-top: 30px;
     display: flex;
@@ -383,22 +517,53 @@ button.btn:hover {
     gap: 40px;
 }
 
-.department {
-    background-color: #fff;
-    padding: 25px 30px;
-    border-radius: 10px;
+.catalogue-nav {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.catalogue-nav a {
+    padding: 8px 16px;
+    border-radius: 999px;
+    background-color: rgba(255, 255, 255, 0.85);
+    text-decoration: none;
+    color: var(--color-text-main);
+    font-size: 14px;
+    font-weight: 600;
+    transition: background 0.3s, color 0.3s, transform 0.2s;
     box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-    transition: transform 0.3s;
+}
+
+.catalogue-nav a:hover {
+    background-color: var(--color-accent);
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+[data-theme="dark"] .catalogue-nav a {
+    background-color: rgba(15, 23, 42, 0.9);
+    color: #e5e7eb;
+}
+
+.department {
+    background-color: var(--color-card-bg);
+    padding: 25px 30px;
+    border-radius: 14px;
+    box-shadow: 0 14px 36px var(--color-card-shadow);
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .department:hover {
     transform: translateY(-4px);
+    box-shadow: 0 22px 55px var(--color-card-shadow);
 }
 
 .department h2 {
-    color: #333;
     margin-bottom: 15px;
-    border-bottom: 2px solid #4CAF50;
+    border-bottom: 2px solid var(--color-accent);
     display: inline-block;
     padding-bottom: 5px;
 }
@@ -411,33 +576,85 @@ table {
 
 table th, table td {
     padding: 12px 10px;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #e5e7eb;
 }
 
 table th {
-    background-color: #4CAF50;
+    background-color: var(--color-table-header);
     color: #fff;
 }
 
-table tr:hover {
-    background-color: #f9f9f9;
+[data-theme="dark"] table th {
+    border-bottom-color: #134e4a;
 }
 
-/* =========================================================
+table tr:hover {
+    background-color: var(--color-table-row-hover);
+}
+
+table tbody tr:nth-child(even) {
+    background-color: var(--color-table-row-alt);
+}
+
+/* Book info inside table */
+.book-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.book-cover {
+    width: 40px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 4px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+}
+
+.book-text span {
+    display: block;
+    font-size: 12px;
+    color: #6b7280;
+}
+
+[data-theme="dark"] .book-text span {
+    color: #9ca3af;
+}
+
+/* Same column layout for all catalogue tables */
+.catalogue-section table {
+    table-layout: fixed;
+}
+
+.catalogue-section table th:nth-child(1),
+.catalogue-section table td:nth-child(1) {
+    width: 80px;     /* Serial number column */
+}
+
+.catalogue-section table th:nth-child(2),
+.catalogue-section table td:nth-child(2) {
+    width: 300px;    /* Book info column */
+}
+
+.catalogue-section table th:nth-child(3),
+.catalogue-section table td:nth-child(3) {
+    width: 100px;    /* Price column */
+}
+
+.catalogue-section table th:nth-child(4),
+.catalogue-section table td:nth-child(4) {
+    width: 150px;    /* Cart button column */
+}
+
+
+/* =========================
    FOOTER
-========================================================= */
+========================= */
 footer {
-    background-color: #333;
+    background-color: var(--color-bg-footer);
     color: #fff;
     text-align: center;
     padding: 10px 0;
     margin-top: auto;
     width: 100%;
-    bottom: 0;
 }
-
-/* =========================================================
-   CART
-========================================================= */
-
-

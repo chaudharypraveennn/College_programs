@@ -6,37 +6,56 @@
     <title>Login - College</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <!-- Header / Navbar -->
+<body class="page-login">
+    <!-- Navbar -->
     <header>
         <div class="logo">
-            <img src="GLBajaj_logo.png" alt="College Logo">
+            <img src="images/GLBajaj_logo.png" alt="College Logo">
         </div>
         <nav>
             <ul>
                 <li><a href="home.html">Home</a></li>
                 <li><a href="catalogue.html">Catalogue</a></li>
                 <li><a href="cart.html">Cart</a></li>
+
+                <li>
+                    <button type="button" id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle theme">
+                        🌙
+                    </button>
+                </li>
+
                 <li><a href="registration.html">Registration</a></li>
                 <li><a href="login.html" class="active">Login</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- Login Section -->
+    <!-- Login -->
     <main>
         <section class="login-section">
             <div class="login-box">
                 <h2>Login</h2>
-                <form action="#" method="post">
+                <form id="login-form" action="#" method="post">
                     <div class="input-group">
-                        <label for="username">Username</label>
-                        <input type="text" id="username" name="username" placeholder="Enter your username" required>
+                        <label for="login-email">Email</label>
+                        <input 
+                            type="email" 
+                            id="login-email" 
+                            name="email" 
+                            placeholder="Enter your email"
+                            required
+                            pattern=".+@(gmail\.com|glbitm\.ac\.in)"
+                            title="Use only @gmail.com or @glbitm.ac.in">
                     </div>
 
                     <div class="input-group">
-                        <label for="password">Password</label>
-                        <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                        <label for="login-password">Password</label>
+                        <input 
+                            type="password" 
+                            id="login-password" 
+                            name="password" 
+                            placeholder="Enter your password" 
+                            required>
                     </div>
 
                     <button type="submit" class="btn">Login</button>
@@ -48,10 +67,11 @@
             </div>
         </section>
     </main>
+    
+<footer>
+	<p>&copy; 2025 GL Bajaj | Created by Praveen Chaudhary (Roll No. 240, Section 2D) 👨‍🎓.</p>
+</footer>
 
-    <!-- Footer -->
-    <footer>
-	    <p>&copy; 2025 GL Bajaj | All rights reserved.</p>
-    </footer>
+<script src="script.js"></script>
 </body>
 </html>

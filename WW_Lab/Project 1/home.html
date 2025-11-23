@@ -6,16 +6,23 @@
 	<title>College Homepage</title>
 	<link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="page-home">
 <header>
 	<div class="logo">
-		<img src="GLBajaj_logo.png" alt="College Logo">
+		<img src="images/GLBajaj_logo.png" alt="College Logo">
 	</div>
 	<nav>
 		<ul>
 			<li><a href="home.html" class="active">Home</a></li>
 			<li><a href="catalogue.html">Catalogue</a></li>
 			<li><a href="cart.html">Cart</a></li>
+
+			<li>
+				<button type="button" id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle theme">
+					🌙
+				</button>
+			</li>
+
 			<li><a href="registration.html">Registration</a></li>
 			<li><a href="login.html">Login</a></li>
 		</ul>
@@ -25,9 +32,9 @@
 <main>
 	<section class="home-welcome">
 		<div class="welcome-card">
-			<h1>Welcome to GL Bajaj</h1>
+			<h1 id="home-title">Welcome to GL Bajaj</h1>
 			<p>Explore our college, programs, and opportunities for students.</p>
-			<div class="home-buttons">
+			<div class="home-buttons" id="homeButtons">
 				<a href="registration.html" class="btn">Register Now</a>
 				<a href="login.html" class="btn">Login</a>
 			</div>
@@ -37,17 +44,19 @@
 	<section class="home-courses">
 		<h2>Available Programs</h2>
 		<div class="course-cards">
-			<div class="course-card">Computer Science</div>
-			<div class="course-card">Mechanical Engineering</div>
-			<div class="course-card">Electrical Engineering</div>
-			<div class="course-card">Civil Engineering</div>
-			<div class="course-card">Business Administration</div>
+			<a href="catalogue.html#cse" class="course-card">Computer Science</a>
+			<a href="catalogue.html#mechanical" class="course-card">Mechanical Engineering</a>
+			<a href="catalogue.html#electrical" class="course-card">Electrical Engineering</a>
+			<a href="catalogue.html#civil" class="course-card">Civil Engineering</a>
+			<a href="catalogue.html#ai" class="course-card">Artificial Intelligence</a>
 		</div>
 	</section>
 </main>
 
 <footer>
-	<p>&copy; 2025 GL Bajaj | All rights reserved.</p>
+	<p>&copy; 2025 GL Bajaj | Created by Praveen Chaudhary (Roll No. 240, Section 2D) 👨‍🎓.</p>
 </footer>
+
+<script src="script.js"></script>
 </body>
 </html>

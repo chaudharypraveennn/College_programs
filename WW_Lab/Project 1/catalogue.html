@@ -6,17 +6,24 @@
 	<title>Catalogue | College Bookstore</title>
 	<link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="page-catalogue">
 <header>
 	<div class="logo">
-		<img src="GLBajaj_logo.png" alt="College Logo">
+		<img src="images/GLBajaj_logo.png" alt="College Logo">
 	</div>
 	<nav>
 		<ul>
 			<li><a href="home.html">Home</a></li>
 			<li><a href="catalogue.html" class="active">Catalogue</a></li>
 			<li><a href="cart.html">Cart</a></li>
-			<li><a href="registration.html">Register</a></li>
+
+			<li>
+				<button type="button" id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle theme">
+					🌙
+				</button>
+			</li>
+
+			<li><a href="registration.html">Registration</a></li>
 			<li><a href="login.html">Login</a></li>
 		</ul>
 	</nav>
@@ -24,9 +31,19 @@
 
 <main>
 	<h1>Book Catalogue</h1>
+
+	<!-- Quick navigation between departments -->
+	<div class="catalogue-nav">
+		<a href="#cse">CSE</a>
+		<a href="#ai">Artificial Intelligence</a>
+		<a href="#electrical">Electrical</a>
+		<a href="#mechanical">Mechanical</a>
+		<a href="#civil">Civil</a>
+	</div>
+
 	<section class="catalogue-section">
 		<!-- CSE Books -->
-		<div class="department">
+		<div class="department" id="cse">
 			<h2>CSE Books</h2>
 			<table>
 				<thead>
@@ -38,15 +55,113 @@
 				</tr>
 				</thead>
 				<tbody>
-				<tr><td>1</td><td>Data Structures in C</td><td>₹450</td><td><button class="btn add-to-cart">Add to Cart</button></td></tr>
-				<tr><td>2</td><td>Operating System Concepts</td><td>₹620</td><td><button class="btn add-to-cart">Add to Cart</button></td></tr>
-				<tr><td>3</td><td>Database Management Systems</td><td>₹500</td><td><button class="btn add-to-cart">Add to Cart</button></td></tr>
+				<tr>
+					<td>1</td>
+					<td>
+						<div class="book-info">
+							<img src="images/image1_ds.png" alt="Data Structures in C" class="book-cover">
+							<div class="book-text">
+								<strong>Data Structures in C</strong>
+								<span>by Ananya Mehra</span>
+							</div>
+						</div>
+					</td>
+					<td>₹450</td>
+					<td><button class="btn add-to-cart">Add to Cart</button></td>
+				</tr>
+				<tr>
+					<td>2</td>
+					<td>
+						<div class="book-info">
+							<img src="images/image2_ds.jpg" alt="Operating System Concepts" class="book-cover">
+							<div class="book-text">
+								<strong>Operating System Concepts</strong>
+								<span>by Rohan Kulkarni</span>
+							</div>
+						</div>
+					</td>
+					<td>₹620</td>
+					<td><button class="btn add-to-cart">Add to Cart</button></td>
+				</tr>
+				<tr>
+					<td>3</td>
+					<td>
+						<div class="book-info">
+							<img src="images/image3_ds.jpeg" alt="Database Management Systems" class="book-cover">
+							<div class="book-text">
+								<strong>Database Management Systems</strong>
+								<span>by Neha Sharma</span>
+							</div>
+						</div>
+					</td>
+					<td>₹500</td>
+					<td><button class="btn add-to-cart">Add to Cart</button></td>
+				</tr>
+				</tbody>
+			</table>
+		</div>
+
+		<!-- AI Books -->
+		<div class="department" id="ai">
+			<h2>Artificial Intelligence Books</h2>
+			<table>
+				<thead>
+				<tr>
+					<th>Serial No.</th>
+					<th>Book Name</th>
+					<th>Price</th>
+					<th>Action</th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr>
+					<td>1</td>
+					<td>
+						<div class="book-info">
+							<img src="images/image1_ai.jpg" alt="Introduction to Artificial Intelligence" class="book-cover">
+							<div class="book-text">
+								<strong>Introduction to Artificial Intelligence</strong>
+								<span>by Arjun Verma</span>
+							</div>
+						</div>
+					</td>
+					<td>₹550</td>
+					<td><button class="btn add-to-cart">Add to Cart</button></td>
+				</tr>
+				<tr>
+					<td>2</td>
+					<td>
+						<div class="book-info">
+							<img src="images/image2_ai.jpeg" alt="Machine Learning Fundamentals" class="book-cover">
+							<div class="book-text">
+								<strong>Machine Learning Fundamentals</strong>
+								<span>by Kavya Nair</span>
+							</div>
+						</div>
+					</td>
+					<td>₹680</td>
+					<td><button class="btn add-to-cart">Add to Cart</button></td>
+				</tr>
+				<tr>
+					<td>3</td>
+					<td>
+						<div class="book-info">
+							<img src="images/image3_ai.jpg" alt="Neural Networks and Deep Learning" class="book-cover">
+							<div class="book-text">
+								<strong>Neural Networks and Deep Learning</strong>
+								<span>by Manish Rao</span>
+							</div>
+						</div>
+					</td>
+					<td>₹720</td>
+					<td><button class="btn add-to-cart">Add to Cart</button></td>
+				</tr>
 				</tbody>
 			</table>
 		</div>
 		
 		<!-- Electrical Books -->
-		<div class="department">
+		<div class="department" id="electrical">
 			<h2>Electrical Books</h2>
 			<table>
 				<thead>
@@ -58,15 +173,54 @@
 				</tr>
 				</thead>
 				<tbody>
-				<tr><td>1</td><td>Basic Electrical Engineering</td><td>₹380</td><td><button class="btn add-to-cart">Add to Cart</button></td></tr>
-				<tr><td>2</td><td>Network Analysis</td><td>₹420</td><td><button class="btn add-to-cart">Add to Cart</button></td></tr>
-				<tr><td>3</td><td>Electrical Machines</td><td>₹600</td><td><button class="btn add-to-cart">Add to Cart</button></td></tr>
+				<tr>
+					<td>1</td>
+					<td>
+						<div class="book-info">
+							<img src="images/image1_ec.jpg" alt="Basic Electrical Engineering" class="book-cover">
+							<div class="book-text">
+								<strong>Basic Electrical Engineering</strong>
+								<span>by Shruti Patel</span>
+							</div>
+						</div>
+					</td>
+					<td>₹380</td>
+					<td><button class="btn add-to-cart">Add to Cart</button></td>
+				</tr>
+				<tr>
+					<td>2</td>
+					<td>
+						<div class="book-info">
+							<img src="images/image2_ec.jpg" alt="Network Analysis" class="book-cover">
+							<div class="book-text">
+								<strong>Network Analysis</strong>
+								<span>by Rahul Saxena</span>
+							</div>
+						</div>
+					</td>
+					<td>₹420</td>
+					<td><button class="btn add-to-cart">Add to Cart</button></td>
+				</tr>
+				<tr>
+					<td>3</td>
+					<td>
+						<div class="book-info">
+							<img src="images/image3_ec.jpg" alt="Electrical Machines" class="book-cover">
+							<div class="book-text">
+								<strong>Electrical Machines</strong>
+								<span>by Divya Kulshreshtha</span>
+							</div>
+						</div>
+					</td>
+					<td>₹600</td>
+					<td><button class="btn add-to-cart">Add to Cart</button></td>
+				</tr>
 				</tbody>
 			</table>
 		</div>
 		
 		<!-- Mechanical Books -->
-		<div class="department">
+		<div class="department" id="mechanical">
 			<h2>Mechanical Books</h2>
 			<table>
 				<thead>
@@ -78,15 +232,54 @@
 				</tr>
 				</thead>
 				<tbody>
-				<tr><td>1</td><td>Thermodynamics</td><td>₹520</td><td><button class="btn add-to-cart">Add to Cart</button></td></tr>
-				<tr><td>2</td><td>Fluid Mechanics</td><td>₹460</td><td><button class="btn add-to-cart">Add to Cart</button></td></tr>
-				<tr><td>3</td><td>Machine Design</td><td>₹580</td><td><button class="btn add-to-cart">Add to Cart</button></td></tr>
+				<tr>
+					<td>1</td>
+					<td>
+						<div class="book-info">
+							<img src="images/image1_me.jpg" alt="Thermodynamics" class="book-cover">
+							<div class="book-text">
+								<strong>Thermodynamics</strong>
+								<span>by Karan Dube</span>
+							</div>
+						</div>
+					</td>
+					<td>₹520</td>
+					<td><button class="btn add-to-cart">Add to Cart</button></td>
+				</tr>
+				<tr>
+					<td>2</td>
+					<td>
+						<div class="book-info">
+							<img src="images/image2_me.jpg" alt="Fluid Mechanics" class="book-cover">
+							<div class="book-text">
+								<strong>Fluid Mechanics</strong>
+								<span>by Priya Menon</span>
+							</div>
+						</div>
+					</td>
+					<td>₹460</td>
+					<td><button class="btn add-to-cart">Add to Cart</button></td>
+				</tr>
+				<tr>
+					<td>3</td>
+					<td>
+						<div class="book-info">
+							<img src="images/image3_me.webp" alt="Machine Design" class="book-cover">
+							<div class="book-text">
+								<strong>Machine Design</strong>
+								<span>by Harshit Yadav</span>
+							</div>
+						</div>
+					</td>
+					<td>₹580</td>
+					<td><button class="btn add-to-cart">Add to Cart</button></td>
+				</tr>
 				</tbody>
 			</table>
 		</div>
 		
 		<!-- Civil Books -->
-		<div class="department">
+		<div class="department" id="civil">
 			<h2>Civil Books</h2>
 			<table>
 				<thead>
@@ -98,9 +291,48 @@
 				</tr>
 				</thead>
 				<tbody>
-				<tr><td>1</td><td>Building Construction</td><td>₹430</td><td><button class="btn add-to-cart">Add to Cart</button></td></tr>
-				<tr><td>2</td><td>Surveying & Levelling</td><td>₹490</td><td><button class="btn add-to-cart">Add to Cart</button></td></tr>
-				<tr><td>3</td><td>Structural Analysis</td><td>₹610</td><td><button class="btn add-to-cart">Add to Cart</button></td></tr>
+				<tr>
+					<td>1</td>
+					<td>
+						<div class="book-info">
+							<img src="images/image1_cv.png" alt="Building Construction" class="book-cover">
+							<div class="book-text">
+								<strong>Building Construction</strong>
+								<span>by Ishita Ghosh</span>
+							</div>
+						</div>
+					</td>
+					<td>₹430</td>
+					<td><button class="btn add-to-cart">Add to Cart</button></td>
+				</tr>
+				<tr>
+					<td>2</td>
+					<td>
+						<div class="book-info">
+							<img src="images/image2_cv.webp" alt="Surveying & Levelling" class="book-cover">
+							<div class="book-text">
+								<strong>Surveying & Levelling</strong>
+								<span>by Aditya Chopra</span>
+							</div>
+						</div>
+					</td>
+					<td>₹490</td>
+					<td><button class="btn add-to-cart">Add to Cart</button></td>
+				</tr>
+				<tr>
+					<td>3</td>
+					<td>
+						<div class="book-info">
+							<img src="images/image3_cv.jpeg" alt="Structural Analysis" class="book-cover">
+							<div class="book-text">
+								<strong>Structural Analysis</strong>
+								<span>by Sneha Rathi</span>
+							</div>
+						</div>
+					</td>
+					<td>₹610</td>
+					<td><button class="btn add-to-cart">Add to Cart</button></td>
+				</tr>
 				</tbody>
 			</table>
 		</div>
@@ -108,8 +340,9 @@
 </main>
 
 <footer>
-	<p>&copy; 2025 GL Bajaj | All rights reserved.</p>
+	<p>&copy; 2025 GL Bajaj | Created by Praveen Chaudhary (Roll No. 240, Section 2D) 👨‍🎓.</p>
 </footer>
+
 <script src="script.js"></script>
 </body>
 </html>

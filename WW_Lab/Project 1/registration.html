@@ -6,16 +6,23 @@
 	<title>Registration - GL Bajaj</title>
 	<link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="page-registration">
 <header>
 	<div class="logo">
-		<img src="GLBajaj_logo.png" alt="College Logo">
+		<img src="images/GLBajaj_logo.png" alt="College Logo">
 	</div>
 	<nav>
 		<ul>
 			<li><a href="home.html">Home</a></li>
 			<li><a href="catalogue.html">Catalogue</a></li>
 			<li><a href="cart.html">Cart</a></li>
+
+			<li>
+				<button type="button" id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle theme">
+					🌙
+				</button>
+			</li>
+
 			<li><a href="registration.html" class="active">Registration</a></li>
 			<li><a href="login.html">Login</a></li>
 		</ul>
@@ -26,7 +33,7 @@
 	<section class="registration-section">
 		<div class="registration-card">
 			<h1>Register for GL Bajaj</h1>
-			<form action="submit_registration.php" method="POST">
+			<form id="registration-form" action="#" method="POST">
 				<div class="form-group">
 					<label for="first-name">First Name</label>
 					<input type="text" id="first-name" name="first-name" placeholder="Enter first name" required>
@@ -39,12 +46,48 @@
 				
 				<div class="form-group">
 					<label for="email">Email</label>
-					<input type="email" id="email" name="email" placeholder="Enter your email" required>
+					<input 
+						type="email" 
+						id="email" 
+						name="email" 
+						placeholder="example@glbitm.ac.in or example@gmail.com" 
+						required
+						pattern=".+@(gmail\.com|glbitm\.ac\.in)"
+						title="Use only @gmail.com or @glbitm.ac.in">
 				</div>
 				
 				<div class="form-group">
 					<label for="phone">Phone Number</label>
-					<input type="tel" id="phone" name="phone" placeholder="Enter phone number" required>
+					<input 
+						type="tel" 
+						id="phone" 
+						name="phone" 
+						placeholder="10-digit mobile number" 
+						required
+						maxlength="10"
+						inputmode="numeric"
+						pattern="\d{10}"
+						title="Enter 10 digit mobile number">
+				</div>
+
+				<div class="form-group">
+					<label for="reg-password">Password</label>
+					<input 
+						type="password" 
+						id="reg-password" 
+						name="reg-password" 
+						placeholder="Create a password" 
+						required>
+				</div>
+
+				<div class="form-group">
+					<label for="reg-confirm-password">Confirm Password</label>
+					<input 
+						type="password" 
+						id="reg-confirm-password" 
+						name="reg-confirm-password" 
+						placeholder="Confirm your password" 
+						required>
 				</div>
 				
 				<div class="form-group">
@@ -52,10 +95,10 @@
 					<select id="course" name="course" required>
 						<option value="">Choose your course</option>
 						<option value="computer-science">Computer Science</option>
+						<option value="artificial-intelligence">Artificial Intelligence</option>
 						<option value="mechanical-engineering">Mechanical Engineering</option>
 						<option value="electrical-engineering">Electrical Engineering</option>
 						<option value="civil-engineering">Civil Engineering</option>
-						<option value="business">Business Administration</option>
 					</select>
 				</div>
 				
@@ -66,7 +109,9 @@
 </main>
 
 <footer>
-	<p>&copy; 2025 GL Bajaj | All rights reserved.</p>
+	<p>&copy; 2025 GL Bajaj | Created by Praveen Chaudhary (Roll No. 240, Section 2D) 👨‍🎓.</p>
 </footer>
+
+<script src="script.js"></script>
 </body>
 </html>
